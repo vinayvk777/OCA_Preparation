@@ -1,0 +1,348 @@
+1.
+
+ public class Main{ 
+           private int i = 1; 
+           public static void main(String argv[]){ 
+              int i = 2; 
+              Main s = new Main (); 
+              s.someMethod(); 
+           } 
+           public static void someMethod(){ 
+              System.out.println(i); 
+           } 
+         }
+
+2.
+
+Which of the following lines will compile without warning or error?
+
+char d="d";
+float f=3.1415;
+int i=34;
+byte b=257;
+boolean isPresent=true;
+
+3.
+
+Which of the following will return the position of the first letter a where the string s contains "banana"?
+
+lastIndexOf(2,s);
+s.indexOf('a');
+s.charAt(2);
+indexOf(s,'v');
+
+4.
+
+        String s1="Java"; 
+         String s2="java"; 
+         if(expression) { 
+            System.out.println("Equal"); 
+         } else { 
+            System.out.println("Not equal"); 
+         } 
+
+s1==s2
+s1.matchCase(s2)
+s1.equalsIgnoreCase(s2)
+s1.equals(s2)
+
+
+5.
+
+Which of the following statements will compile without an error?
+
+int myArray[];
+int myArray[5];
+int myArray[5] = {1,2,3,4,5};
+int myArray[] = {1,2,3,4,5};
+
+6.
+
+Which of the following statements can be used to determine if cat can be found in the list?
+
+         ArrayList<String> list = new ArrayList<>(); 
+         list.add("dog"); 
+         list.add("cat"); 
+         list.add("frog"); 
+
+options:-
+
+list.contains("cat")
+list.hasObject("cat")
+list.indexOf("cat")
+list.indexOf(1)
+
+
+7.
+
+Which of the following statement will compile?
+
+        int i = 5; 
+        int j = 10; 
+options:-
+
+while(i < j) {}
+while(i) {}
+while(i = 5) {}
+while((i = 12)!=5) {}
+
+8.
+
+Which of the following do/while loops will compile without errors?
+
+            a.  int i = 0;  
+                do {  
+                   System.out.println(i++);  
+                } while (i < 50); 
+
+            b.  int i = 0;  
+                do  
+                   System.out.println(i++);  
+                while (i < 50); 
+
+            c.  int i = 0;  
+                do   
+                   System.out.println(i++);  
+                while i < 50; 
+
+            d.  i = 0;  
+                do  
+                   System.out.println(i);  
+                   i++;
+                   i++;  
+                   i++;  
+                while (i < 50); 
+
+9.
+
+Which of the following statements are correct if they replace the comment line?
+
+    public class Main{ 
+       public int i; 
+       public static void main(String argv[]){ 
+          Main sc = new Main(); 
+          // Comment line 
+       } 
+     } 
+
+System.out.println(i);
+System.out.println(sc.i);
+System.out.println(Main.i);
+System.out.println((new Main()).i);
+
+10.
+
+Which is true? (Choose all that apply.)
+
+A. "X extends Y" is correct if and only if X is a class and Y is an interface
+B. "X extends Y" is correct if and only if X is an interface and Y is a class
+C. "X extends Y" is correct if X and Y are either both classes or both interfaces
+D. "X extends Y" is correct for all combinations of X and Y being classes and/or interfaces
+
+11.
+
+Which method names follow the JavaBeans standard? (Choose all that apply.)
+
+A. addSize
+B. getCust
+C. deleteRep
+D. isColorado
+E. putDimensions
+
+12.
+
+Given:
+1. class Voop {
+2. public static void main(String [] args) {
+3. doStuff(1);
+4. doStuff(1,2);
+5. }
+6. // insert code here
+7. }
+
+Which, inserted independently at line 6, will compile? (Choose all that apply.)
+
+A. static void doStuff(int... doArgs) { }
+B. static void doStuff(int[] doArgs) { }
+C. static void doStuff(int doArgs...) { }
+D. static void doStuff(int... doArgs, int y) { }
+E. static void doStuff(int x, int... doArgs) { }
+
+13.
+
+Given:
+1. enum Animals {
+2. DOG("woof"), CAT("meow"), FISH("burble");
+3. String sound;
+4. Animals(String s) { sound = s; }
+5. }
+6. class TestEnum {
+7. static Animals a;
+8. public static void main(String [] args) {
+9. System.out.println(a.DOG.sound + " " + a.FISH.sound);
+10. }
+11. }
+
+What is the result?
+A. woof burble
+B. Multiple compilation errors
+C. Compilation fails due to an error on line 2
+D. Compilation fails due to an error on line 3
+E. Compilation fails due to an error on line 4
+F. Compilation fails due to an error on line 9
+
+14.
+
+Given two files:
+1. package pkgA;
+2. public class Foo {
+3. int a = 5;
+4. protected int b = 6;
+5. public int c = 7;
+6. }
+3. package pkgB;
+4. import pkgA.*;
+5. public class Baz {
+6. public static void main(String[] args) {
+7. Foo f = new Foo();
+8. System.out.print(" " + f.a);
+9. System.out.print(" " + f.b);
+10. System.out.print(" " + f.c);
+11. }
+12. }
+What is the result? (Choose all that apply.)
+A. 5 6 7
+B. 5 followed by an exception
+C. Compilation fails with an error on line 7
+D. Compilation fails with an error on line 8
+E. Compilation fails with an error on line 9
+F. Compilation fails with an error on line 10
+
+15.
+
+Given:
+1. public class Electronic implements Device
+{ public void doIt() { } }
+2.
+3. abstract class Phone1 extends Electronic { }
+4.
+5. abstract class Phone2 extends Electronic
+6.{ public void doIt(int x) { }
+7. class Phone3 extends Electronic implements Device
+{ public void doStuff() { } }
+8.
+9. interface Device { public void doIt(); }
+
+What is the result? (Choose all that apply.)
+A. Compilation succeeds
+B. Compilation fails with an error on line 1
+C. Compilation fails with an error on line 3
+D. Compilation fails with an error on line 5
+E. Compilation fails with an error on line 7
+F. Compilation fails with an error on line 9
+
+16.
+
+Given:
+4. class Announce {
+5. public static void main(String[] args) {
+6. for(int __x = 0; __x < 3; __x++) ;
+7. int #lb = 7;
+8. long [] x [5];
+9. Boolean []ba[];
+10. enum Traffic { RED, YELLOW, GREEN };
+11. }
+12. }
+What is the result? (Choose all that apply.)
+A. Compilation succeeds
+B. Compilation fails with an error on line 6
+C. Compilation fails with an error on line 7
+D. Compilation fails with an error on line 8
+E. Compilation fails with an error on line 9
+F. Compilation fails with an error on line 10
+
+17.
+
+Given:
+3. public class TestDays {
+4. public enum Days { MON, TUE, WED };
+5. public static void main(String[] args) {
+6. for(Days d : Days.values() )
+7. ;
+8. Days [] d2 = Days.values();
+9. System.out.println(d2[2]);
+10. }
+11. }
+What is the result? (Choose all that apply.)
+A. TUE
+B. WED
+C. The output is unpredictable
+D. Compilation fails due to an error on line 4
+E. Compilation fails due to an error on line 6
+F. Compilation fails due to an error on line 8
+G. Compilation fails due to an error on line 9
+
+18.
+
+Given:
+4. public class Frodo extends Hobbit {
+5. public static void main(String[] args) {
+6. Short myGold = 7;
+7. System.out.println(countGold(myGold, 6));
+8. }
+9. }
+10. class Hobbit {
+11. int countGold(int x, int y) { return x + y; }
+12.}
+
+What is the result?
+A. 13
+B. Compilation fails due to multiple errors
+C. Compilation fails due to an error on line 6
+D. Compilation fails due to an error on line 7
+E. Compilation fails due to an error on line 11
+
+19.
+
+What will be output by the following code?
+
+        int i; 
+        int j; 
+        for (i=1; i < 4; i++) { 
+           for (j=2; j < 4; j++) { 
+              if (j == 3) { 
+                 continue; 
+              } 
+              System.out.println("i: " + i + " j: " + j); 
+           } 
+        } 
+
+            a.  i: 1 j: 2  
+                i: 2 j: 2  
+                i: 3 j: 2 
+
+            b.  i: 1 j: 3  
+                i: 2 j: 3  
+                i: 3 j: 3 
+
+            c.  i: 1 j: 1  
+                i: 2 j: 1  
+                i: 3 j: 1 
+
+20.
+
+Given:
+1. ClassA has a ClassD
+2. Methods in ClassA use public methods in ClassB
+3. Methods in ClassC use public methods in ClassA
+4. Methods in ClassA use public variables in ClassB
+Which is most likely true? (Choose the most likely.)
+A. ClassD has low cohesion
+B. ClassA has weak encapsulation
+C. ClassB has weak encapsulation
+D. ClassB has strong encapsulation
+E. ClassC is tightly coupled to ClassA
+
+
+
+
